@@ -1,0 +1,26 @@
+.button {
+    -fx-background-color: #212121;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button:hover {
+    -fx-background-color: #616161;
+}
+
+.progress-bar{
+	-fx-control-inner-background: #9E9E9E;
+}
+
+.root{
+    -fx-background: #424242;
+}
+/* 
+.list-view .list-cell{
+	-fx-background-color: #424242;
+	-fx-text-fill: #FFFFFF;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}*/

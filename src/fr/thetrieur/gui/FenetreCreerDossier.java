@@ -34,7 +34,7 @@ public class FenetreCreerDossier {
 		stage.setTitle("Créer Dossier");
 		FlowPane root = new FlowPane(Orientation.VERTICAL, 10, 10);
 		root.setPadding(new Insets(30, 30, 30, 30));
-		Scene scene = new Scene(root, 450, 150);
+		Scene scene = new Scene(root, 450, 175);
 		GridPane grid = new GridPane();
 		Image image = null;
 		try {
@@ -44,7 +44,7 @@ public class FenetreCreerDossier {
 		}
 		ImageView imageView = new ImageView(image);
 		imageView.setFitWidth(128);
-		imageView.setFitHeight(128);
+		imageView.setFitHeight(96);
 		nom = new TextField();
 		nom.setPrefWidth(240);
 		labelNom = new Label("Nom : ");
@@ -60,10 +60,13 @@ public class FenetreCreerDossier {
 			}
 
 		});
-		grid.add(imageView, 0, 0,1,2);
+		
+		grid.setHgap(30);
+		grid.add(imageView, 0, 0, 1, 2);
 		grid.add(labelNom, 1, 0);
 		grid.add(nom, 1, 1);
-		root.getChildren().addAll(grid, valider);
+		grid.add(valider, 1, 2, 2, 1);
+		root.getChildren().add(grid);
 		scene.getStylesheets().add("style.css");
 		stage.setScene(scene);
 		stage.show();

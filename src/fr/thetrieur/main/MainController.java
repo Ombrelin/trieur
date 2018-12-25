@@ -1,10 +1,16 @@
 package fr.thetrieur.main;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.Optional;
 
 import fr.thetrieur.fichiers.Dossier;
 import fr.thetrieur.fichiers.Fichier;
+import fr.thetrieur.trieur.Trieur;
 import javafx.beans.property.SimpleListProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -98,6 +104,23 @@ public class MainController {
 			}
 
 		});
+		
+		//Chargement de la configuration
+		File f = new File("config.dat");
+		if (f.exists() && !f.isDirectory()) {
+			System.out.println("Reading saved data");
+			try {
+				FileInputStream fluxFichiers = new FileInputStream("config.dat");
+				ObjectInputStream fluxObjet = new ObjectInputStream(fluxFichiers);
+				ArrayList<Dossier> temp = (ArrayList<Dossier>) fluxObjet.readObject();
+				dossiers.addAll(temp);
+				fluxObjet.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			dossiers = FXCollections.observableArrayList();
+		}
 	}
 	
 	public void handleBtnSelectFolder() {
@@ -171,6 +194,28 @@ public class MainController {
 		}
 	}
 
+	public void handleBtnTrier() {
+		Thread t = new Thread(new Trieur(dossiers, progressBar, dossierChoisi, exclus));
+		t.start();
+	}
+	
+	public void handleBtnValiderConfig() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					FileOutputStream fluxFichiers = new FileOutputStream("config.dat");
+					ObjectOutputStream fluxObjet = new ObjectOutputStream(fluxFichiers);
+					fluxObjet.writeObject(new ArrayList<Dossier>(dossiers));
+					fluxObjet.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+		}).start();
+	}
 	
 	public void setStage(Stage stage) {
 		this.stage = stage;

@@ -43,10 +43,10 @@ public class Trieur implements Runnable {
 		for (Path p : dossierCourant) {
 			System.out.println(p);
 			for (Dossier d : dossiers) {
+				System.out.println(d);
 				for (Fichier f : d.getFichiers()) {
-					for (String exclu : this.exclus) {
-						if (p.getFileName().toString().contains(f.getExtension())
-								&& !p.getFileName().toString().equals(exclu)) {
+					if (!exclus.contains(f.getNom())) {
+						if (p.getFileName().toString().contains(f.getExtension())) {
 							File file = new File(d.getNom());
 							if (!file.canExecute()) {
 								file.mkdirs();
@@ -61,7 +61,6 @@ public class Trieur implements Runnable {
 
 						}
 					}
-
 				}
 
 			}

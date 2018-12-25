@@ -53,7 +53,7 @@
                               <Button fx:id="btnSelectFolder" mnemonicParsing="false" onAction="#handleBtnSelectFolder" prefHeight="55.0" prefWidth="223.0" text="Séléctionner un Dossier" />
                               <Button fx:id="btnPersonnaliser" mnemonicParsing="false" onAction="#handleBtnPersonnaliser" prefHeight="55.0" prefWidth="223.0" text="Personnaliser" />
                               <Button fx:id="btnExclure" mnemonicParsing="false" onAction="#handleBtnExclure" prefHeight="55.0" prefWidth="223.0" text="Exclure" />
-                              <Button fx:id="btnTrier" mnemonicParsing="false" prefHeight="55.0" prefWidth="223.0" text="Trier" translateY="472.0" />
+                              <Button fx:id="btnTrier" mnemonicParsing="false" onAction="#handleBtnTrier" prefHeight="55.0" prefWidth="223.0" text="Trier" translateY="472.0" />
                            </children>
                         </VBox>
                      </children>
@@ -108,7 +108,7 @@
                                           <Font size="38.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="btnValiderPerso" mnemonicParsing="false" prefHeight="42.0" prefWidth="355.0" text="Valider" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <Button fx:id="btnValiderPerso" onAction="#handleBtnValiderConfig" mnemonicParsing="false" prefHeight="42.0" prefWidth="355.0" text="Valider" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                                     <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <children>
                                           <Button fx:id="btnAddFolder" mnemonicParsing="false" text="+" onAction="#addFolder"/>

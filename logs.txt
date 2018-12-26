@@ -1,0 +1,5 @@
+Wed Dec 26 01:41:54 CET 2018 : Lecture des données sauvegardées (configutation)
+Wed Dec 26 01:41:54 CET 2018 : Lecture des données sauvegardées (exclusions)
+Wed Dec 26 01:42:01 CET 2018 : Importation de la configuration : config.dat
+Wed Dec 26 01:42:04 CET 2018 : Lecture des données sauvegardées (configutation)
+Wed Dec 26 01:42:04 CET 2018 : Lecture des données sauvegardées (exclusions)

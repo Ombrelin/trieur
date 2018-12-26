@@ -16,10 +16,10 @@ public class Appli extends Application {
 	public void start(Stage stage) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-		    Parent root = (Parent) loader.load(getClass().getResource("trieur.fxml").openStream());
+		    Parent root = (Parent) loader.load(getClass().getResource("trieurMain.fxml").openStream());
 		    MainController main = loader.getController();
 		    main.setStage(stage);
-		    stage.setTitle("Connexion");
+		    stage.setTitle("Trieur");
 		    stage.setScene(new Scene(root));
 		    stage.show();
 		} catch (IOException e) {

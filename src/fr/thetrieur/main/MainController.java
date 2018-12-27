@@ -14,6 +14,7 @@ import java.util.Optional;
 import fr.thetrieur.fichiers.Dossier;
 import fr.thetrieur.fichiers.Fichier;
 import fr.thetrieur.trieur.Trieur;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleListProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -264,6 +265,7 @@ public class MainController {
 	public void addFolder() {
 		Dossier d = null;
 		TextInputDialog dialog = new TextInputDialog("");
+		dialog.getDialogPane().getStylesheets().add("dialogStyle.css");
 		dialog.setTitle("Ajouter un dossier");
 		dialog.setHeaderText("Création d'un nouveau dossier");
 		dialog.setContentText("Entrez le nom du nouveau dossier");
@@ -279,6 +281,7 @@ public class MainController {
 	public void editFile() {
 		Fichier f = listFichiers.getSelectionModel().getSelectedItem();
 		TextInputDialog dialog = new TextInputDialog("");
+		dialog.getDialogPane().getStylesheets().add("dialogStyle.css");
 		dialog.setTitle("Modification du fichier");
 		dialog.setHeaderText("Modification du fichier");
 		dialog.setContentText("Entrez le nouveau nom du fichier");
@@ -300,6 +303,7 @@ public class MainController {
 	public void addFile() {
 		Fichier f = null;
 		TextInputDialog dialog = new TextInputDialog("");
+		dialog.getDialogPane().getStylesheets().add("dialogStyle.css");
 		dialog.setTitle("Ajouter un fichier");
 		dialog.setHeaderText("Création d'un nouveau fichier");
 		dialog.setContentText("Entrez l'extension du nouveau type de fichier");
@@ -350,6 +354,7 @@ public class MainController {
 			@Override
 			public void handle(WorkerStateEvent arg0) {
 				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.getDialogPane().getStylesheets().add("dialogStyle.css");
 				alert.setTitle("Tri terminé");
 				alert.setHeaderText("Tri terminé !");
 				alert.setContentText("Le tri de vos fichiers a été réalisé avec succès");
@@ -363,6 +368,7 @@ public class MainController {
 
 	public void handleBtnAddExclus() {
 		TextInputDialog dialog = new TextInputDialog("");
+		dialog.getDialogPane().getStylesheets().add("dialogStyle.css");
 		dialog.setTitle("Exclure un fichier");
 		dialog.setHeaderText("Exclusion d'un fichier");
 		dialog.setContentText("Entrez le nom du fichier à exclure");
@@ -472,11 +478,12 @@ public class MainController {
 
 	private boolean askOverwrite() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.getDialogPane().getStylesheets().add("dialogStyle.css");
 		alert.setTitle("Choix");
 		alert.setHeaderText("Voulez vous écraser la configuration actuelle avec la configuration importée \n "
 				+ "ou bien ajouter la configuration importée à la configuration actuelle ?");
 		alert.setContentText("Ecraser ou ajouter");
-
+		alert.initModality(Modality.APPLICATION_MODAL);
 		ButtonType buttonTypeOne = new ButtonType("Ecraser");
 		ButtonType buttonTypeTwo = new ButtonType("Ajouter");
 
@@ -489,5 +496,35 @@ public class MainController {
 			return false;
 		}
 		return false;
+	}
+
+	public void handleQuit() {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.getDialogPane().getStylesheets().add("dialogStyle.css");
+		alert.setTitle("Quitter");
+		alert.setHeaderText("Voulez vous vraiment quitter ?");
+		alert.setContentText("Quitter");
+		alert.initModality(Modality.APPLICATION_MODAL);
+		ButtonType buttonTypeOne = new ButtonType("Oui");
+		ButtonType buttonTypeTwo = new ButtonType("Non");
+
+		alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.get() == buttonTypeOne) {
+			Platform.exit();
+		}
+
+	}
+
+	public void handleAPropos() {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.getDialogPane().getStylesheets().add("dialogStyle.css");
+		alert.setTitle("A Propos");
+		alert.setHeaderText("A propos de Trieur");
+		alert.setContentText(
+				"Trieur est une application Open Source distribuée sous la licence CC-BY-NC.\n Elle a été conçue et développée par Arsène Lapostolet \n Contact : arsene@lapostolet.fr");
+		alert.initModality(Modality.APPLICATION_MODAL);
+		alert.showAndWait();
 	}
 }

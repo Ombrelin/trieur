@@ -1,0 +1,31 @@
+.dialog-pane {
+    -fx-background-color: rgb(40,40,40);
+}
+
+.dialog-pane .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: rgb(30,30,30);
+}
+
+/* Fix derived prompt color for text fields */
+.text-input {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, +50%);
+}
+
+/* Keep prompt invisible when focused (above color fix overrides it) */
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+.button{
+	-fx-background-radius: 0;
+	-fx-background-color: rgb(0, 102, 204);
+	-fx-text-fill: white;
+}
+
+.button:hover{
+	-fx-background-color: #1E88E5;
+}

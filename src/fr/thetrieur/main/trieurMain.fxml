@@ -51,11 +51,11 @@
 							<children>
 								<VBox prefHeight="692.0" prefWidth="208.0" AnchorPane.bottomAnchor="0.7999999999999545" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 									<children>
-      										<Button fx:id="btnSelectFolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleBtnSelectFolder" prefHeight="55.0" text="Séléctionner un dossier source">
+      										<Button fx:id="btnSelectFolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleBtnSelectFolder" prefHeight="55.0" text="Sélectionner un dossier source">
                                  <VBox.margin>
                                     <Insets left="5.0" right="5.0" top="5.0" />
                                  </VBox.margin></Button>
-      										<Button fx:id="btnSelectDest" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleBtnSelectDest" prefHeight="55.0" text="Séléctionner un dossier destination">
+      										<Button fx:id="btnSelectDest" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleBtnSelectDest" prefHeight="55.0" text="Sélectionner un dossier destination">
                                  <VBox.margin>
                                     <Insets left="5.0" right="5.0" top="5.0" />
                                  </VBox.margin></Button>

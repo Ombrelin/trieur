@@ -278,9 +278,11 @@ public class MainController {
 		dialog.setTitle("Ajouter un dossier");
 		dialog.setHeaderText("Création d'un nouveau dossier");
 		dialog.setContentText("Entrez le nom du nouveau dossier");
+		
 		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
 		try {
 			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+			dialog.setGraphic(new ImageView(new Image(new FileInputStream("resources/logoAddFolder.png"))));
 		} catch (FileNotFoundException e) {
 			Logger.getInstance().log("Image non trouvée");
 		}
@@ -312,8 +314,9 @@ public class MainController {
 			f.setExtension(result.get());
 			f.setNom(result.get());
 			this.reloadFichiers(listDossiers.getSelectionModel().getSelectedItem());
+			Logger.getInstance().log("Modification du fichier : " + f);
 		}
-		Logger.getInstance().log("Modification du fichier : " + f);
+		
 	}
 
 	public void removeFolder() {
@@ -335,7 +338,6 @@ public class MainController {
 			Logger.getInstance().log("Image non trouvée");
 			e.printStackTrace();
 		}
-		dialog.setGraphic(new ImageView(icon));
 		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
 		try {
 			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
@@ -348,8 +350,9 @@ public class MainController {
 			f = new Fichier(result.get(), result.get());
 			listDossiers.getSelectionModel().getSelectedItem().getFichiers().add(f);
 			this.reloadFichiers(listDossiers.getSelectionModel().getSelectedItem());
+			Logger.getInstance().log("Création du fichier : " + f);
 		}
-		Logger.getInstance().log("Création du fichier : " + f);
+		
 	}
 
 	public void removeFile() {

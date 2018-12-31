@@ -73,3 +73,6 @@
     -fx-text-fill: white;
 }
 
+.progress-bar{
+	-fx-accent: rgb(0,52,104);
+}

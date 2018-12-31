@@ -1,11 +1,13 @@
 package fr.thetrieur.main;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Appli extends Application {
@@ -20,6 +22,7 @@ public class Appli extends Application {
 		    MainController main = loader.getController();
 		    main.setStage(stage);
 		    stage.setTitle("Trieur");
+		    stage.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
 		    Scene scene = new Scene(root);
 		    scene.getStylesheets().add("modena_dark.css");
 		    stage.setScene(scene);

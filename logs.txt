@@ -1,49 +1,8 @@
-Fri Dec 28 19:20:24 CET 2018 : Lecture des données sauvegardées (configutation)
-Fri Dec 28 19:20:24 CET 2018 : Lecture des données sauvegardées (exclusions)
-Fri Dec 28 19:21:42 CET 2018 : Exclusion du fichier : 560px-White_Arrow_Up.svg.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\1200px-Heart_corazón.svg.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\3spotsgame_img.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\490px-Magnifying_glass_icon.svg.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\560px-White_Arrow_Up.svg.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\800px-Carte_du_monde_vierge_(Allemagnes_séparées).svg.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\911px-ISO_C++_Logo.svg.png
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\913m4BOW-NL.jpg
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Archives
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\config.dat
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\desktop.ini
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Divers
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Documents
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\exclus.dat
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Images
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Lightblade VR.url
-Fri Dec 28 19:21:51 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Programmes
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\1200px-Heart_corazón.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\1200px-Heart_corazón.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\1280px-Heart_corazón.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\1280px-Heart_corazón.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\2000px-Book_font_awesome.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\2000px-Book_font_awesome.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\2018-09-19 22_02_50-Eclipse Java Desktop - projet-x_src_main_java_org_game_project_x_entity_EntityTy.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\2018-09-19 22_02_50-Eclipse Java Desktop - projet-x_src_main_java_org_game_project_x_entity_EntityTy.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\2018-10-08 22_49_12-Statistiques et analyses _ perspective.brussels.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\2018-10-08 22_49_12-Statistiques et analyses _ perspective.brussels.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\3spotsgame_img.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\3spotsgame_img.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\490px-Magnifying_glass_icon.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\490px-Magnifying_glass_icon.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\560px-White_Arrow_Up.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\800px-Carte_du_monde_vierge_(Allemagnes_séparées).svg.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\800px-Carte_du_monde_vierge_(Allemagnes_séparées).svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\911px-ISO_C++_Logo.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\911px-ISO_C++_Logo.svg.png
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\913m4BOW-NL.jpg
-Fri Dec 28 19:22:27 CET 2018 : Déplacement : C:\Users\arsen\Desktop\Images\913m4BOW-NL.jpg
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Archives
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\config.dat
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\desktop.ini
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Divers
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Documents
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\exclus.dat
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Images
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Lightblade VR.url
-Fri Dec 28 19:22:27 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Programmes
+Mon Dec 31 01:33:58 CET 2018 : Lecture des données sauvegardées (configutation)
+Mon Dec 31 01:33:58 CET 2018 : Lecture des données sauvegardées (exclusions)
+Mon Dec 31 01:34:01 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Archives
+Mon Dec 31 01:34:01 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\desktop.ini
+Mon Dec 31 01:34:01 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Divers
+Mon Dec 31 01:34:01 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Documents
+Mon Dec 31 01:34:01 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Images
+Mon Dec 31 01:34:01 CET 2018 : Traitement du fichier : C:\Users\arsen\Desktop\Programmes

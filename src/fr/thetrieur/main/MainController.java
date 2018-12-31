@@ -2,6 +2,7 @@ package fr.thetrieur.main;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,6 +12,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Optional;
+
 import fr.thetrieur.fichiers.Dossier;
 import fr.thetrieur.fichiers.Fichier;
 import fr.thetrieur.trieur.Trieur;
@@ -36,6 +38,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -164,6 +167,12 @@ public class MainController {
 
 		});
 
+		try {
+			welcome.setImage(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Impossible de charger l'image de bienvenue");
+		}
+		
 		dossierChoisi = System.getProperty("user.home") + "/Desktop";
 		destination = System.getProperty("user.home") + "/Desktop";
 		// Chargement de la configuration
@@ -269,6 +278,12 @@ public class MainController {
 		dialog.setTitle("Ajouter un dossier");
 		dialog.setHeaderText("Création d'un nouveau dossier");
 		dialog.setContentText("Entrez le nom du nouveau dossier");
+		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		dialog.initModality(Modality.APPLICATION_MODAL);
 		Optional<String> result = dialog.showAndWait();
 		if (result.isPresent()) {
@@ -285,6 +300,12 @@ public class MainController {
 		dialog.setTitle("Modification du fichier");
 		dialog.setHeaderText("Modification du fichier");
 		dialog.setContentText("Entrez le nouveau nom du fichier");
+		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		dialog.initModality(Modality.APPLICATION_MODAL);
 		Optional<String> result = dialog.showAndWait();
 		if (result.isPresent()) {
@@ -307,6 +328,20 @@ public class MainController {
 		dialog.setTitle("Ajouter un fichier");
 		dialog.setHeaderText("Création d'un nouveau fichier");
 		dialog.setContentText("Entrez l'extension du nouveau type de fichier");
+		Image icon = null;
+		try {
+			icon = new Image(new FileInputStream("resources/logoAddFolder.png"));			
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+			e.printStackTrace();
+		}
+		dialog.setGraphic(new ImageView(icon));
+		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		dialog.initModality(Modality.APPLICATION_MODAL);
 		Optional<String> result = dialog.showAndWait();
 		if (result.isPresent()) {
@@ -354,6 +389,12 @@ public class MainController {
 			@Override
 			public void handle(WorkerStateEvent arg0) {
 				Alert alert = new Alert(AlertType.INFORMATION);
+				Stage fenetreModale = (Stage) alert.getDialogPane().getScene().getWindow();
+				try {
+					fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+				} catch (FileNotFoundException e) {
+					Logger.getInstance().log("Image non trouvée");
+				}
 				alert.getDialogPane().getStylesheets().add("dialogStyle.css");
 				alert.setTitle("Tri terminé");
 				alert.setHeaderText("Tri terminé !");
@@ -372,6 +413,12 @@ public class MainController {
 		dialog.setTitle("Exclure un fichier");
 		dialog.setHeaderText("Exclusion d'un fichier");
 		dialog.setContentText("Entrez le nom du fichier à exclure");
+		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		dialog.initModality(Modality.APPLICATION_MODAL);
 		Optional<String> result = dialog.showAndWait();
 		if (result.isPresent()) {
@@ -483,6 +530,12 @@ public class MainController {
 		alert.setHeaderText("Voulez vous écraser la configuration actuelle avec la configuration importée \n "
 				+ "ou bien ajouter la configuration importée à la configuration actuelle ?");
 		alert.setContentText("Ecraser ou ajouter");
+		Stage fenetreModale = (Stage) alert.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		alert.initModality(Modality.APPLICATION_MODAL);
 		ButtonType buttonTypeOne = new ButtonType("Ecraser");
 		ButtonType buttonTypeTwo = new ButtonType("Ajouter");
@@ -504,6 +557,12 @@ public class MainController {
 		alert.setTitle("Quitter");
 		alert.setHeaderText("Voulez vous vraiment quitter ?");
 		alert.setContentText("Quitter");
+		Stage fenetreModale = (Stage) alert.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		alert.initModality(Modality.APPLICATION_MODAL);
 		ButtonType buttonTypeOne = new ButtonType("Oui");
 		ButtonType buttonTypeTwo = new ButtonType("Non");
@@ -522,6 +581,12 @@ public class MainController {
 		alert.getDialogPane().getStylesheets().add("dialogStyle.css");
 		alert.setTitle("A Propos");
 		alert.setHeaderText("A propos de Trieur");
+		Stage fenetreModale = (Stage) alert.getDialogPane().getScene().getWindow();
+		try {
+			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		} catch (FileNotFoundException e) {
+			Logger.getInstance().log("Image non trouvée");
+		}
 		alert.setContentText(
 				"Trieur est une application Open Source distribuée sous la licence CC-BY-NC.\n Elle a été conçue et développée par Arsène Lapostolet \n Contact : arsene@lapostolet.fr");
 		alert.initModality(Modality.APPLICATION_MODAL);

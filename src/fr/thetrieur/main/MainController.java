@@ -282,8 +282,8 @@ public class MainController {
 		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
 		try {
 			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
-			dialog.setGraphic(new ImageView(new Image(new FileInputStream("resources/logoAddFolder.png"))));
-		} catch (FileNotFoundException e) {
+			dialog.setGraphic(new ImageView(new Image(getClass().getResource("logoAddFolder.png").openStream())));
+		} catch (IOException e) {
 			Logger.getInstance().log("Image non trouvée");
 		}
 		dialog.initModality(Modality.APPLICATION_MODAL);
@@ -333,15 +333,15 @@ public class MainController {
 		dialog.setContentText("Entrez l'extension du nouveau type de fichier");
 		Image icon = null;
 		try {
-			icon = new Image(new FileInputStream("resources/logoAddFolder.png"));			
-		} catch (FileNotFoundException e) {
+			icon = new Image(getClass().getResource("logoAddFolder.png").openStream());			
+		} catch (IOException e) {
 			Logger.getInstance().log("Image non trouvée");
 			e.printStackTrace();
 		}
 		Stage fenetreModale = (Stage) dialog.getDialogPane().getScene().getWindow();
 		try {
-			fenetreModale.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
-		} catch (FileNotFoundException e) {
+			fenetreModale.getIcons().add(new Image((getClass().getResource("icon.png").openStream())));
+		} catch (IOException e) {
 			Logger.getInstance().log("Image non trouvée");
 		}
 		dialog.initModality(Modality.APPLICATION_MODAL);

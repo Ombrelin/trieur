@@ -22,7 +22,7 @@ public class Appli extends Application {
 		    MainController main = loader.getController();
 		    main.setStage(stage);
 		    stage.setTitle("Trieur");
-		    stage.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
+		    stage.getIcons().add(new Image(getClass().getResource("icon.png").openStream()));
 		    Scene scene = new Scene(root);
 		    scene.getStylesheets().add("modena_dark.css");
 		    stage.setScene(scene);

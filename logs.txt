@@ -1,3 +1,2 @@
-Mon Dec 31 12:51:58 CET 2018 : Lecture des données sauvegardées (configutation)
-Mon Dec 31 12:51:58 CET 2018 : Lecture des données sauvegardées (exclusions)
-Mon Dec 31 12:52:20 CET 2018 : Création du dossier : null
+Mon Jan 21 21:02:40 CET 2019 : Lecture des données sauvegardées (configutation)
+Mon Jan 21 21:02:40 CET 2019 : Lecture des données sauvegardées (exclusions)

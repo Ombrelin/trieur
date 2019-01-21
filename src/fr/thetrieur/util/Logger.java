@@ -1,4 +1,4 @@
-package fr.thetrieur.main;
+package fr.thetrieur.util;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

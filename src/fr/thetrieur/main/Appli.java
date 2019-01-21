@@ -1,13 +1,9 @@
 package fr.thetrieur.main;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
+import fr.thetrieur.gui.Loader;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Appli extends Application {
@@ -17,15 +13,7 @@ public class Appli extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			FXMLLoader loader = new FXMLLoader();
-		    Parent root = (Parent) loader.load(getClass().getResource("trieurMain.fxml").openStream());
-		    MainController main = loader.getController();
-		    main.setStage(stage);
-		    stage.setTitle("Trieur");
-		    stage.getIcons().add(new Image(new FileInputStream("resources/icon.png")));
-		    Scene scene = new Scene(root);
-		    scene.getStylesheets().add("modena_dark.css");
-		    stage.setScene(scene);
+			new Loader().load(stage);
 		    stage.show();
 		} catch (IOException e) {
 			e.printStackTrace();

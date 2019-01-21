@@ -11,7 +11,7 @@ import javafx.concurrent.*;
 
 import fr.thetrieur.fichiers.Dossier;
 import fr.thetrieur.fichiers.Fichier;
-import fr.thetrieur.main.Logger;
+import fr.thetrieur.util.Logger;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ProgressBar;
 

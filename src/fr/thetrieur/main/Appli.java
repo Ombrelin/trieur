@@ -13,7 +13,7 @@ public class Appli extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			new Loader().load(stage);
+			Loader.getInstance().load(stage);
 		    stage.show();
 		} catch (IOException e) {
 			e.printStackTrace();

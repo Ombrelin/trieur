@@ -1,17 +1,19 @@
 package fr.thetrieur.util;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
+import fr.thetrieur.gui.Loader;
+
 public class Logger {
 	private static Logger INSTANCE;
-	private static String LOGS_FILE_NAME = "logs.txt";
+	private static String LOGS_FILE_NAME = Loader.getInstance().getMyDocuments() + "\\logs.txt";
 	private PrintWriter writer;
 	
 	private Logger() {
+		System.out.println("Starting logging to : " + LOGS_FILE_NAME);
 		try {
 			writer = new PrintWriter(new FileWriter(LOGS_FILE_NAME),true);
 		} catch (IOException e) {

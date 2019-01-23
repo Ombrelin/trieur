@@ -13,7 +13,7 @@ public class Logger {
 	private PrintWriter writer;
 	
 	private Logger() {
-		System.out.println("Starting logging to : " + LOGS_FILE_NAME);
+		System.out.println(new Date() + " : " + "Starting logging to : " + LOGS_FILE_NAME);
 		try {
 			writer = new PrintWriter(new FileWriter(LOGS_FILE_NAME),true);
 		} catch (IOException e) {

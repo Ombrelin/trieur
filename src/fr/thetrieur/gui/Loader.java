@@ -26,7 +26,7 @@ public class Loader {
 	    scene.getStylesheets().add("modena_dark.css");
 	    stage.setScene(scene);
 	    
-	    File f = new File(this.getMyDocuments() + "\\Trieur\\");
+	    File f = new File(this.getMyDocuments());
 	    if(!f.canExecute()) {
 	    	f.mkdirs();
 	    }

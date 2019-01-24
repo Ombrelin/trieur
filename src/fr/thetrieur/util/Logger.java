@@ -12,6 +12,10 @@ public class Logger {
 	private static String LOGS_FILE_NAME = Loader.getInstance().getMyDocuments() + "\\logs.txt";
 	private PrintWriter writer;
 	
+	static {
+		INSTANCE = new Logger();
+	}
+	
 	private Logger() {
 		System.out.println(new Date() + " : " + "Starting logging to : " + LOGS_FILE_NAME);
 		try {
@@ -22,9 +26,6 @@ public class Logger {
 	}
 	
 	public static Logger getInstance() {
-		if(INSTANCE == null) {
-			INSTANCE = new Logger();
-		}
 		return INSTANCE;
 	}
 	

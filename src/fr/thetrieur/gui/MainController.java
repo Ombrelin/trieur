@@ -182,7 +182,7 @@ public class MainController {
 		File selectedFile = fileChooser.showOpenDialog(stage);
 
 		try {
-			Files.copy(selectedFile.toPath(), Paths.get("config.dat"), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(selectedFile.toPath(), Paths.get(Loader.getInstance().getMyDocuments() + "\\config.dat"), StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -212,7 +212,7 @@ public class MainController {
 		File selectedFile = fileChooser.showOpenDialog(stage);
 
 		try {
-			Files.copy(selectedFile.toPath(), Paths.get("exclus.dat"), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(selectedFile.toPath(), Paths.get(Loader.getInstance().getMyDocuments() + "\\exclus.dat"), StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -227,7 +227,7 @@ public class MainController {
 		File selectedFile = fileChooser.showOpenDialog(stage);
 
 		try {
-			Files.copy(Paths.get("exclus.dat"), selectedFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(Paths.get(Loader.getInstance().getMyDocuments() + "\\exclus.dat"), selectedFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -420,7 +420,7 @@ public class MainController {
 			@Override
 			public void run() {
 				try {
-					FileOutputStream fluxFichiers = new FileOutputStream("config.dat");
+					FileOutputStream fluxFichiers = new FileOutputStream(Loader.getInstance().getMyDocuments() + "\\config.dat");
 					ObjectOutputStream fluxObjet = new ObjectOutputStream(fluxFichiers);
 					fluxObjet.writeObject(new ArrayList<Dossier>(dossiers));
 					fluxObjet.close();
@@ -455,7 +455,7 @@ public class MainController {
 			@Override
 			public void run() {
 				try {
-					FileOutputStream fluxFichiers = new FileOutputStream("exclus.dat");
+					FileOutputStream fluxFichiers = new FileOutputStream(Loader.getInstance().getMyDocuments() + "\\exclus.dat");
 					ObjectOutputStream fluxObjet = new ObjectOutputStream(fluxFichiers);
 					fluxObjet.writeObject(new ArrayList<String>(exclus));
 					fluxObjet.close();
@@ -472,11 +472,11 @@ public class MainController {
 	}
 
 	private void loadConfig(boolean overwrite) {
-		File f = new File("config.dat");
+		File f = new File(Loader.getInstance().getMyDocuments() + "\\config.dat");
 		if (f.exists() && !f.isDirectory()) {
 			Logger.getInstance().log("Lecture des données sauvegardées (configutation)");
 			try {
-				FileInputStream fluxFichiers = new FileInputStream("config.dat");
+				FileInputStream fluxFichiers = new FileInputStream(Loader.getInstance().getMyDocuments() + "\\config.dat");
 				ObjectInputStream fluxObjet = new ObjectInputStream(fluxFichiers);
 				ArrayList<Dossier> temp = (ArrayList<Dossier>) fluxObjet.readObject();
 				if (overwrite) {
@@ -489,11 +489,11 @@ public class MainController {
 			}
 		}
 
-		f = new File("exclus.dat");
+		f = new File(Loader.getInstance().getMyDocuments() + "\\exclus.dat");
 		if (f.exists() && !f.isDirectory()) {
 			Logger.getInstance().log("Lecture des données sauvegardées (exclusions)");
 			try {
-				FileInputStream fluxFichiers = new FileInputStream("exclus.dat");
+				FileInputStream fluxFichiers = new FileInputStream(Loader.getInstance().getMyDocuments() + "\\exclus.dat");
 				ObjectInputStream fluxObjet = new ObjectInputStream(fluxFichiers);
 				ArrayList<String> temp = (ArrayList<String>) fluxObjet.readObject();
 				if (overwrite) {

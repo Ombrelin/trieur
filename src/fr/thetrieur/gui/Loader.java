@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 
 public class Loader {
 	private static Loader INSTANCE;
-	
+	static{
+		INSTANCE = new Loader();
+	}
 	
 	public void load(Stage stage) throws IOException{
 
@@ -57,7 +59,7 @@ public class Loader {
 	}
 	
 	public static Loader getInstance() {
-		return INSTANCE == null?new Loader():INSTANCE;
+		return INSTANCE;
 	}
 	
 }
